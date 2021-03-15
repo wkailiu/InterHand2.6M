@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Author: wenkai liu
+# @Date:   2021-03-15 11:27:51
+# @Last Modified by:   wenkai liu
+# @Last Modified time: 2021-03-15 16:14:04
 # Copyright (c) Facebook, Inc. and its affiliates.
 # All rights reserved.
 #
@@ -72,7 +77,8 @@ class ResNetBackbone(nn.Module):
         x = self.layer2(x)
         x = self.layer3(x)
         x = self.layer4(x)
-
+        # x.shape: (bs, 2048, 8, 8)
+        # print('x', x.shape)
         return x
 
     def init_weights(self):
