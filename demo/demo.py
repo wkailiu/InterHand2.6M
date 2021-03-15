@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# @Author: wenkai liu
+# @Date:   2021-03-15 14:56:41
+# @Last Modified by:   wenkai liu
+# @Last Modified time: 2021-03-15 14:58:56
 # Copyright (c) Facebook, Inc. and its affiliates.
 # All rights reserved.
 #
@@ -52,7 +57,7 @@ cudnn.benchmark = True
 joint_num = 21 # single hand
 root_joint_idx = {'right': 20, 'left': 41}
 joint_type = {'right': np.arange(0,joint_num), 'left': np.arange(joint_num,joint_num*2)}
-skeleton = load_skeleton(osp.join('../data/InterHand2.6M/annotations/skeleton.txt'), joint_num*2)
+skeleton = load_skeleton(osp.join('/media/lwk/T7/datasets/InterHand2.6M/annotations/skeleton.txt'), joint_num*2)
 
 # snapshot load
 model_path = './snapshot_%d.pth.tar' % int(args.test_epoch)
